@@ -1,0 +1,44 @@
+#########################
+## Space Game
+#########################
+
+.DS_Store
+*.DS_Store
+
+
+#########################
+## Unity
+#########################
+
+Library/
+Logs/
+Temp/
+UserSettings/
+CodeCoverage/
+
+SpaceGame/Assets/BuildReports/
+SpaceGame/Assets/BuildReports.meta
+
+SpaceGame/*.csproj
+SpaceGame/*.sln
+
+SpaceGame/.vsconfig
+
+
+#########################
+## Visual Studio
+#########################
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio generated files
+.vs/
+*.user
+
+# NuGet Packages
+*.nupkg

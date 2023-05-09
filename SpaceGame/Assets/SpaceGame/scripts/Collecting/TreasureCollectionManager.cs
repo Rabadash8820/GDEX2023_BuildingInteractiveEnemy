@@ -33,7 +33,7 @@ namespace SpaceGame
 
         [MinValue(0d)]
         public int ReturnedTreasuresToWin = 5;
-        [Required] public Image ImgTreasure;
+        public Image ImgTreasure;
         public UnityEvent TreasureReturned = new();
         public UnityEvent AllTreasureReturned = new();
 
@@ -69,7 +69,8 @@ namespace SpaceGame
         public void ReturnTreasure(TreasureCollectible treasure)
         {
             TxtTreasureCount.text = string.Format(TreasureCountFormatString, ++ReturnedCount, ReturnedTreasuresToWin);
-            ImgTreasure.sprite = treasure.Sprite;
+            if (ImgTreasure != null)
+                ImgTreasure.sprite = treasure.Sprite;
             Destroy(treasure.gameObject);
             _collectedTreasure = null;
             TreasureReturned.Invoke();

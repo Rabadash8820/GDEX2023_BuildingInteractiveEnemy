@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2559335049503891317}
   - component: {fileID: 3143657879124644014}
   - component: {fileID: 7763063724093641254}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: collect-particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5004,9 +5004,8 @@ GameObject:
   - component: {fileID: 8530170791973029641}
   - component: {fileID: 1180119077038330448}
   - component: {fileID: 4161772470183788924}
-  - component: {fileID: 3924316061395720700}
   - component: {fileID: 773729895073780054}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: treasure-return
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5083,19 +5082,7 @@ MonoBehaviour:
   CollectedPlayerOffset: {x: -1.4, y: 0}
   TreasureCollected:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: collected
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   TreasureCountEvents: []
   ReturnedTreasuresToWin: 4
   ImgTreasure: {fileID: 0}
@@ -5114,18 +5101,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3924316061395720700}
-        m_TargetAssemblyTypeName: SpaceGame.TimerTrigger, Assembly-CSharp
-        m_MethodName: RestartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 773729895073780054}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -5138,7 +5113,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-  AllTreasuresReturned:
+  AllTreasureReturned:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
@@ -5164,47 +5139,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
---- !u!114 &3924316061395720700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3200954829736521095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fdfe315696ee4404baea5ecda94b310, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Duration: 1
-  StartWithComponentStart: 0
-  Complete:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SpaceGame.TimeManager, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!82 &773729895073780054
 AudioSource:

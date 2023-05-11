@@ -38,6 +38,7 @@ namespace SpaceGame
         public UnityEvent TreasureReturned = new();
         public UnityEvent AllTreasureReturned = new();
 
+        [field: ShowInInspector]
         public int ReturnedCount { get; private set; } = 0;
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
@@ -91,10 +92,13 @@ namespace SpaceGame
             }
         }
 
+        [Button]
         public void CheckIfAllReturned()
         {
-            if (ReturnedCount == ReturnedTreasuresToWin)
+            if (ReturnedCount == ReturnedTreasuresToWin) {
+                Debug.Log($"All {ReturnedTreasuresToWin} treasures have been returned");
                 AllTreasureReturned.Invoke();
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ Open the single scene file at `scenes/main.unity` to see how it's all put togeth
 The game itself, _"Space Game"_, is basically a treasure hunt through space,
 where the player must dodge asteroids and monsters to collect all "treasures" and bring them back to the space station.
 Players can also use a simple "gravity gun" to push and pull asteroids out of the way.
-Check out the origial [design doc](./design-doc).
+Check out the origial [design doc](./original-design-doc.md).
 
 ## Screenshots
 

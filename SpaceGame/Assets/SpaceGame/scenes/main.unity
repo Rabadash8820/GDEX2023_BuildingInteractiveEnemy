@@ -6686,6 +6686,8 @@ GameObject:
   - component: {fileID: 901995010}
   - component: {fileID: 901995009}
   - component: {fileID: 901995011}
+  - component: {fileID: 901995013}
+  - component: {fileID: 901995012}
   m_Layer: 0
   m_Name: time-manager
   m_TagString: Untagged
@@ -6746,6 +6748,64 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &901995012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901995008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: 75699addde853b24a90f07569c5fe264, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 901995009}
+          m_TargetAssemblyTypeName: SpaceGame.TimeManager, Assembly-CSharp
+          m_MethodName: SetTimeScale
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 1
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &901995013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901995008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: c703fbcef3a802a4ba45a8ff723e407a, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 901995009}
+          m_TargetAssemblyTypeName: SpaceGame.TimeManager, Assembly-CSharp
+          m_MethodName: SetTimeScale
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -6829,6 +6889,8 @@ GameObject:
   - component: {fileID: 921659951}
   - component: {fileID: 921659953}
   - component: {fileID: 921659952}
+  - component: {fileID: 921659955}
+  - component: {fileID: 921659954}
   m_Layer: 5
   m_Name: ui
   m_TagString: Untagged
@@ -7011,6 +7073,64 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1838267113}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+--- !u!114 &921659954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921659946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: 75699addde853b24a90f07569c5fe264, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 340650752}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &921659955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921659946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: c703fbcef3a802a4ba45a8ff723e407a, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 340650752}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
@@ -11892,22 +12012,10 @@ MonoBehaviour:
   Paused:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 901995009}
-        m_TargetAssemblyTypeName: SpaceGame.TimeManager, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 340650752}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11400000, guid: c703fbcef3a802a4ba45a8ff723e407a, type: 2}
+        m_TargetAssemblyTypeName: SpaceGame.GameEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11919,22 +12027,10 @@ MonoBehaviour:
   Resumed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 901995009}
-        m_TargetAssemblyTypeName: SpaceGame.TimeManager, Assembly-CSharp
-        m_MethodName: SetTimeScale
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 340650752}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 11400000, guid: 75699addde853b24a90f07569c5fe264, type: 2}
+        m_TargetAssemblyTypeName: SpaceGame.GameEvent, Assembly-CSharp
+        m_MethodName: Invoke
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -15,11 +15,11 @@ namespace SpaceGame
 
         [Required] public Slider HealthSlider;
 
-        public UnityEvent HealthDecreased;
-        public UnityEvent HealthIncreased;
+        public UnityEvent HealthDecreased = new();
+        public UnityEvent HealthIncreased = new();
 
         [Tooltip("Emmitted when health is at 0")]
-        public UnityEvent HealthDepleted;
+        public UnityEvent HealthDepleted = new();
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start() => HealthSlider.SetValueWithoutNotify(_healthValue);

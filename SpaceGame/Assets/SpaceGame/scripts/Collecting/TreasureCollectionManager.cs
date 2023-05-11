@@ -12,8 +12,8 @@ namespace SpaceGame
     public class TreasureCountEvent
     {
         [MinValue(0d)] public int TreasureCount;
-        public UnityEvent NowAtCountOrHigher;
-        public UnityEvent NowLower;
+        public UnityEvent NowAtCountOrHigher = new();
+        public UnityEvent NowLower = new();
         [NonSerialized] public bool AtCountOrHigher;
     }
 

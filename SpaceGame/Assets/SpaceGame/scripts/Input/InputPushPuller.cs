@@ -28,8 +28,8 @@ namespace SpaceGame
         [MinValue(0d)]
         public int MaxSpeedAlongAxis = 3;
 
-        public UnityEvent Started;
-        public UnityEvent Performed;
+        public UnityEvent Started = new();
+        public UnityEvent Performed = new();
 
         public float InputValue { get; private set; }
 

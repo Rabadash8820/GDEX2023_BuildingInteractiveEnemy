@@ -16,8 +16,8 @@ namespace SpaceGame
     public class FollowDistanceEvent
     {
         [MinValue(0d)] public float Distance;
-        public UnityEvent NowAtDistanceOrCloser;
-        public UnityEvent NowFurther;
+        public UnityEvent NowAtDistanceOrCloser = new();
+        public UnityEvent NowFurther = new();
         [NonSerialized] public bool AtDistanceOrCloser;
     }
 

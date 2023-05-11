@@ -5,7 +5,6 @@
 
 using Sirenix.OdinInspector;
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +15,7 @@ namespace SpaceGame
     {
         public event EventHandler Invoked;
 
-        public UnityEvent BaseActions = new UnityEvent();
+        public UnityEvent BaseActions = new();
 
         [Button]
         public void Invoke()

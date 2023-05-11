@@ -5,7 +5,7 @@ namespace SpaceGame
 {
     public class TriggeringCollider : MonoBehaviour
     {
-        public UnityEvent StartedTriggering;
-        public UnityEvent StoppedTriggering;
+        public UnityEvent StartedTriggering = new();
+        public UnityEvent StoppedTriggering = new();
     }
 }

@@ -20,8 +20,8 @@ namespace SpaceGame
         [MinValue(0d)]
         public float MaxAcceleration = 100f;
 
-        public UnityEvent Started;
-        public UnityEvent Performed;
+        public UnityEvent Started = new();
+        public UnityEvent Performed = new();
 
         public float SpeedSign { get; private set; }
 

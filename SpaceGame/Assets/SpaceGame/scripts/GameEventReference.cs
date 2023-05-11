@@ -18,7 +18,7 @@ namespace SpaceGame
         public GameEvent Event;
 
         [Tooltip("Methods to call when " + nameof(Event) + " is raised")]
-        public UnityEvent Actions = new UnityEvent();
+        public UnityEvent Actions = new();
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnEnable() => Event!.Invoked += doInvoke;

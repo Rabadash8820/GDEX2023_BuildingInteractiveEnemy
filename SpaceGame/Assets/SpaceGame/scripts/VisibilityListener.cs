@@ -14,8 +14,8 @@ namespace SpaceGame
         public float VisibleRefactoryPeriod = 3f;
         public float InvisibleRefactoryPeriod = 3f;
 
-        public UnityEvent BecameVisible;
-        public UnityEvent BecameInvisible;
+        public UnityEvent BecameVisible = new();
+        public UnityEvent BecameInvisible = new();
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()

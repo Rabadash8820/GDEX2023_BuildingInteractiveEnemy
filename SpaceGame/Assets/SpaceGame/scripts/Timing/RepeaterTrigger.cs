@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -18,13 +19,17 @@ namespace SpaceGame
 
         public UnityEvent RepeatTriggered = new();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start()
         {
             if (StartWithComponentStart)
                 Restart();
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnEnable() => Restart();
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnDisable() => stop();
 
         public void Restart()
@@ -36,6 +41,7 @@ namespace SpaceGame
 
         public void Stop() => stop();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()
         {
             if (_running && (_tElapsed += Time.deltaTime) >= RepeatDuration)

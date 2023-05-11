@@ -4,6 +4,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using U = UnityEngine;
 using UnityEngine.Events;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SpaceGame
 {
@@ -21,9 +22,9 @@ namespace SpaceGame
 
         public bool TryGetSpawnedInstanceInRegion(PolygonCollider2D region, out Transform instance) =>
             _regionSpawnedInstances.TryGetValue(region.GetInstanceID(), out instance)
-                ? instance != null
-                : false;
+            && instance != null;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Awake()
         {
             _regions = RegionsParent.GetComponentsInChildren<PolygonCollider2D>();
@@ -64,7 +65,7 @@ namespace SpaceGame
                 int spawnPointIndex = Random.Range(0, regionSpawnPoints.Count);
                 Transform spawnPoint = regionSpawnPoints[spawnPointIndex];
 
-                var instance = Instantiate(PrefabToSpawn, spawnPoint).transform;
+                Transform instance = Instantiate(PrefabToSpawn, spawnPoint).transform;
                 _regionSpawnedInstances[regionId] = instance;
 
                 InstanceSpawned.Invoke(instance, spawnPoint, region);

@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,6 +17,7 @@ namespace SpaceGame
         public UnityEvent BecameVisible;
         public UnityEvent BecameInvisible;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()
         {
             float dt = Time.deltaTime;
@@ -31,6 +33,7 @@ namespace SpaceGame
             }
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnBecameVisible()
         {
             if (!_inRefactoryVisible)
@@ -39,6 +42,7 @@ namespace SpaceGame
             _tElapsedVisible = 0f;
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnBecameInvisible()
         {
             if (!_inRefactoryInvisible)

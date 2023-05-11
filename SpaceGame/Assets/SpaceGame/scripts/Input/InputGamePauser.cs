@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -13,6 +14,7 @@ namespace SpaceGame
         public UnityEvent Paused = new();
         public UnityEvent Resumed = new();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Awake()
         {
             _pauseInput = new MainInput().Player.Pause;
@@ -31,7 +33,10 @@ namespace SpaceGame
             IsPaused = isPaused;
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnEnable() => _pauseInput.Enable();
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnDisable() => _pauseInput.Disable();
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,10 +21,8 @@ namespace SpaceGame
         [Tooltip("Emmitted when health is at 0")]
         public UnityEvent HealthDepleted;
 
-        private void Start()
-        {
-            HealthSlider.SetValueWithoutNotify(_healthValue);
-        }
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        private void Start() => HealthSlider.SetValueWithoutNotify(_healthValue);
 
         public void UpdateHealth(float amount)
         {

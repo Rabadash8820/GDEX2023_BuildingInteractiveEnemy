@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -14,6 +15,7 @@ namespace SpaceGame
         public bool StartWithComponentStart;
         public UnityEvent Complete = new();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start()
         {
             if (StartWithComponentStart)
@@ -26,6 +28,7 @@ namespace SpaceGame
             _complete = false;
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()
         {
             if (!_complete && (_tElapsed += Time.deltaTime) >= Duration)

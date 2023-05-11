@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -14,6 +15,7 @@ namespace SpaceGame
         [Required] public InputRigidbodyMover InputRigidbodyMover;
         [Required] public InputRigidbodyRotater InputRigidbodyRotater;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             updateParticleState(FrontLeftRocketParticles, InputRigidbodyMover.SpeedSign < 0f || InputRigidbodyRotater.AngularSpeedSign > 0f);

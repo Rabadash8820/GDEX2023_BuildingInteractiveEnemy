@@ -20,7 +20,10 @@ namespace SpaceGame
         [Tooltip("Methods to call when " + nameof(Event) + " is raised")]
         public UnityEvent Actions = new UnityEvent();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnEnable() => Event!.Invoked += doInvoke;
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnDisable() => Event!.Invoked -= doInvoke;
 
         private void doInvoke(object sender, EventArgs e) => Actions.Invoke();

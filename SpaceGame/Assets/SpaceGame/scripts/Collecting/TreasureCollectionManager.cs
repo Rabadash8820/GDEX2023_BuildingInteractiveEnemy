@@ -1,5 +1,6 @@
 using Sirenix.OdinInspector;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -39,8 +40,10 @@ namespace SpaceGame
 
         public int ReturnedCount { get; private set; } = 0;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start() => TxtTreasureCount.text = string.Format(TreasureCountFormatString, 0, ReturnedTreasuresToWin);
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnTriggerEnter2D(Collider2D collider)
         {
             if (!collider.attachedRigidbody.TryGetComponent(out TreasureCollectible treasure) || treasure != _collectedTreasure)

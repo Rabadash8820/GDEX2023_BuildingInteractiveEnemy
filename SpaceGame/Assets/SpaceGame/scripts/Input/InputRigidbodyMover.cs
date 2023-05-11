@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -24,11 +25,10 @@ namespace SpaceGame
 
         public float SpeedSign { get; private set; }
 
-        private void Awake()
-        {
-            _moveInput = new MainInput().Player.Move;
-        }
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        private void Awake() => _moveInput = new MainInput().Player.Move;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             SpeedSign = _moveInput.inProgress ? _moveInput.ReadValue<float>() : 0f;
@@ -55,7 +55,10 @@ namespace SpaceGame
             RigidbodyToMove.AddForce(accelToDo, forceMode);
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnEnable() => _moveInput.Enable();
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnDisable() => _moveInput.Disable();
     }
 }

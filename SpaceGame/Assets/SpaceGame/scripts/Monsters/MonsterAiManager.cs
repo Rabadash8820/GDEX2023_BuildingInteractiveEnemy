@@ -2,6 +2,7 @@ using Sirenix.OdinInspector;
 using UnityEngine;
 using System.Linq;
 using UnityEngine.InputSystem;
+using System.Diagnostics.CodeAnalysis;
 
 namespace SpaceGame
 {
@@ -14,18 +15,19 @@ namespace SpaceGame
 
         public float PlayerFollowDistance = 8f;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Awake()
         {
             PerRegionSpawner.InstanceSpawned.AddListener(initializeSpawnedInstance);
             MonsterRegionListener[] monsterRegionListeners = PerRegionSpawner.RegionsParent.GetComponentsInChildren<MonsterRegionListener>();
-            foreach (var listener in monsterRegionListeners)
+            foreach (MonsterRegionListener listener in monsterRegionListeners)
             {
                 listener.TriggerEnterred += (sender, e) => handleColliderEnterringRegion(e.RegionTriggerCollider, e.TriggeringCollider);
                 listener.TriggerExited += (sender, e) => handleColliderExitingRegion(e.RegionTriggerCollider, e.TriggeringCollider);
             }
         }
 
-        public void handleColliderEnterringRegion(PolygonCollider2D region, Collider2D collider)
+        private void handleColliderEnterringRegion(PolygonCollider2D region, Collider2D collider)
         {
             if (collider.attachedRigidbody.transform != PlayerTransform)
                 return;
@@ -54,7 +56,7 @@ namespace SpaceGame
             monster.RigidbodyFollower.FollowDistance = PlayerFollowDistance;
         }
 
-        public void handleColliderExitingRegion(PolygonCollider2D region, Collider2D collider)
+        private void handleColliderExitingRegion(PolygonCollider2D region, Collider2D collider)
         {
             if (collider.attachedRigidbody.transform != PlayerTransform)
                 return;
@@ -97,12 +99,12 @@ namespace SpaceGame
 
         private void initializeSpawnedInstance(Transform instance, Transform spawnPoint, PolygonCollider2D region)
         {
-            var monster = instance.GetComponent<Monster>();
+            Monster monster = instance.GetComponent<Monster>();
             if (!monster)
                 return;
 
             monster.SpawnPoint = spawnPoint;
-            var eyeLookAts = instance.GetComponentsInChildren<LookAt2D>(includeInactive: true);
+            LookAt2D[] eyeLookAts = instance.GetComponentsInChildren<LookAt2D>(includeInactive: true);
             foreach (LookAt2D lookAt in eyeLookAts)
                 lookAt.LookAtTransform = PlayerTransform;
         }

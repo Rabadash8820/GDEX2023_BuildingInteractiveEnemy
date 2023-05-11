@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using U = UnityEngine;
@@ -15,6 +16,7 @@ namespace SpaceGame
 
         public bool RotateOnStart;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start()
         {
             if (RotateOnStart)

@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 namespace SpaceGame
@@ -11,6 +12,7 @@ namespace SpaceGame
         [Tooltip("The parallax value for the material offset. Lower float = more visual movement.")]
         public float Parallax = 500f;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()
         {
             MeshRenderer.material.mainTextureOffset = new Vector2(

@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -32,11 +33,10 @@ namespace SpaceGame
 
         public float InputValue { get; private set; }
 
-        private void Awake()
-        {
-            _pushPullInput = new MainInput().Player.PushPull;
-        }
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        private void Awake() => _pushPullInput = new MainInput().Player.PushPull;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             InputValue = _pushPullInput.ReadValue<float>();
@@ -54,7 +54,7 @@ namespace SpaceGame
             if (InputValue == 0f)
                 return;
 
-            foreach (var collider in CollidingCollidersCollection.Colliders)
+            foreach (Collider2D collider in CollidingCollidersCollection.Colliders)
             {
                 Rigidbody2D rb = collider.attachedRigidbody;
                 if (rb == null)
@@ -62,13 +62,16 @@ namespace SpaceGame
 
                 float pushPullRange = TriggerCapsuleCollider.size.x;
                 Vector2 rbOffset = rb.position - (Vector2)LineOfSightTransform.position;
-                Vector3 posAlongAxis = Vector3.Project(rbOffset, LineOfSightTransform.right);
+                var posAlongAxis = Vector3.Project(rbOffset, LineOfSightTransform.right);
                 float posDistanceRatio = posAlongAxis.magnitude / pushPullRange;
                 rb.AddForce(ForceMultiplierWithDistance.Evaluate(posDistanceRatio) * InputValue * rbOffset);
             }
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnEnable() => _pushPullInput.Enable();
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnDisable() => _pushPullInput.Disable();
     }
 }

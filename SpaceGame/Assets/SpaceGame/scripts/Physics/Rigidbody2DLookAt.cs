@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 namespace SpaceGame
@@ -8,6 +9,7 @@ namespace SpaceGame
         [Required] public Transform LookAtTransform;
         [Required] public Rigidbody2D LookerRigidbody;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             Vector2 vectorBetween = (Vector2)LookAtTransform.position - LookerRigidbody.position;

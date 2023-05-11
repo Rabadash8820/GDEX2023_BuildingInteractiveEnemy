@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,6 +25,7 @@ namespace SpaceGame
         public UnityEvent PushPullUiNeeded = new();
         public UnityEvent HasPushPulled = new();
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Update()
         {
             if (_allUiShown)

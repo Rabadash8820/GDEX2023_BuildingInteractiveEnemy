@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -53,6 +54,7 @@ namespace SpaceGame
         [ShowIf("@" + nameof(OffsetType) + " == " + nameof(SpaceGame) + "." + nameof(SpaceGame.OffsetType) + "." + nameof(OffsetType.Distance))]
         public FollowDistanceEvent[] FollowDistanceEvents;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             if (TransformToFollow == null)
@@ -75,7 +77,7 @@ namespace SpaceGame
                     float distToMove = Mathf.Min(currSpeed * Time.fixedDeltaTime, distToOffset);
                     RigidbodyToMove.MovePosition(RigidbodyToMove.position + distToMove * moveDir);
 
-                    foreach (var followDistEvent in FollowDistanceEvents)
+                    foreach (FollowDistanceEvent followDistEvent in FollowDistanceEvents)
                     {
                         bool wasAtOrCloser = followDistEvent.AtDistanceOrCloser;
                         if (CurrentDistance <= followDistEvent.Distance && !wasAtOrCloser)
@@ -97,9 +99,10 @@ namespace SpaceGame
             }
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnDrawGizmos()
         {
-            foreach (var followDistEvent in FollowDistanceEvents)
+            foreach (FollowDistanceEvent followDistEvent in FollowDistanceEvents)
                 Gizmos.DrawWireSphere(RigidbodyToMove.position, followDistEvent.Distance);
         }
     }

@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -24,11 +25,10 @@ namespace SpaceGame
 
         public float AngularSpeedSign { get; private set; }
 
-        private void Awake()
-        {
-            _lookInput = new MainInput().Player.Look;
-        }
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
+        private void Awake() => _lookInput = new MainInput().Player.Look;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
             AngularSpeedSign = _lookInput.inProgress ? _lookInput.ReadValue<float>() : 0f;
@@ -53,7 +53,10 @@ namespace SpaceGame
             RigidbodyToRotate.AddTorque(torqueToDo, ForceMode2D.Force);
         }
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnEnable() => _lookInput.Enable();
+
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         public void OnDisable() => _lookInput.Disable();
     }
 }

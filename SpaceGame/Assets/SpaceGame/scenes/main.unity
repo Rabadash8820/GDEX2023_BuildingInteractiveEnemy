@@ -5489,6 +5489,10 @@ PrefabInstance:
       value: Treasure 4
       objectReference: {fileID: 0}
     - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
+      propertyPath: Description
+      value: Treasure 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
       propertyPath: TreasureCollectionManager
       value: 
       objectReference: {fileID: 1689984412}
@@ -9814,6 +9818,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1006679768368944503, guid: 777a2581f400a48f79d64079a84ebf38, type: 3}
   m_PrefabInstance: {fileID: 1313429894}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1326348300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
+  m_PrefabInstance: {fileID: 8859390628655927749}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f832bdbabb20494a9d09220ac2de642, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1326877340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1487773010278532793, guid: ceacd6339ba0b42eb8fb7c63d6dfe176, type: 3}
@@ -13411,6 +13426,10 @@ PrefabInstance:
       value: Treasure 3
       objectReference: {fileID: 0}
     - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
+      propertyPath: Description
+      value: Treasure 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
       propertyPath: TreasureCollectionManager
       value: 
       objectReference: {fileID: 1689984412}
@@ -13474,6 +13493,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
       propertyPath: Name
+      value: Treasure 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
+      propertyPath: Description
       value: Treasure 1
       objectReference: {fileID: 0}
     - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
@@ -15502,6 +15525,10 @@ PrefabInstance:
       value: Treasure 2
       objectReference: {fileID: 0}
     - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
+      propertyPath: Description
+      value: Treasure 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970400058651284603, guid: 027600620939a487faf3383420e093fa, type: 3}
       propertyPath: TreasureCollectionManager
       value: 
       objectReference: {fileID: 1689984412}
@@ -15550,6 +15577,10 @@ PrefabInstance:
       propertyPath: TxtTreasureCount
       value: 
       objectReference: {fileID: 996970759}
+    - target: {fileID: 4161772470183788924, guid: 8f58825dae7f84f4f862b9231bab6cb6, type: 3}
+      propertyPath: TreasureCollector
+      value: 
+      objectReference: {fileID: 1326348300}
     - target: {fileID: 4161772470183788924, guid: 8f58825dae7f84f4f862b9231bab6cb6, type: 3}
       propertyPath: TxtCollectedTreasure
       value: 
@@ -16060,6 +16091,10 @@ PrefabInstance:
       propertyPath: Performed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3787004244764110381, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
+      propertyPath: m_Name
+      value: treasure-collector
+      objectReference: {fileID: 0}
     - target: {fileID: 6429016515434062736, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: m_Name
       value: player
@@ -16104,6 +16139,18 @@ PrefabInstance:
       propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
+      propertyPath: PlayerTransform
+      value: 
+      objectReference: {fileID: 1462199244}
+    - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
+      propertyPath: TxtCollectedTreasure
+      value: 
+      objectReference: {fileID: 827296575}
+    - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
+      propertyPath: TreasureCollectionManager
+      value: 
+      objectReference: {fileID: 1689984412}
     - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: Collected.m_PersistentCalls.m_Calls.Array.size
       value: 3

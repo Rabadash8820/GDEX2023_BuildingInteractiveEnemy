@@ -1,9 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SpaceGame
 {
     public abstract class Collectible : MonoBehaviour
     {
-        public abstract bool Collect();
+        public UnityEvent Collected = new();
+        public UnityEvent Dropped = new();
     }
 }

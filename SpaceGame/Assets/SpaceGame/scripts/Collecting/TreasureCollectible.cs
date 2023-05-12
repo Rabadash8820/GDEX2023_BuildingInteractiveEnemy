@@ -1,27 +1,16 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace SpaceGame
 {
     public class TreasureCollectible : Collectible
     {
-        [Required] public TreasureCollectionManager TreasureCollectionManager;
-
         [TextArea]
-        public string Name = "";
+        public string Description = "";
+
         public Sprite Sprite;
-        [Required] public RigidbodyFollower RigidbodyFollower;
 
-        public UnityEvent Collected = new();
-
-        public override bool Collect()
-        {
-            bool wasCollected = TreasureCollectionManager.CollectTreasure(this);
-            if (wasCollected)
-                Collected.Invoke();
-
-            return wasCollected;
-        }
+        [Required]
+        public RigidbodyFollower RigidbodyFollower;
     }
 }

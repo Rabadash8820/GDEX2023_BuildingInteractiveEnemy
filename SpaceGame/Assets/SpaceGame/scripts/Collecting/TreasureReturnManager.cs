@@ -18,16 +18,11 @@ namespace SpaceGame
     }
 
     [RequireComponent(typeof(Collider2D))]
-    public class TreasureCollectionManager : MonoBehaviour
+    public class TreasureReturnManager : MonoBehaviour
     {
-        private TreasureCollectible _collectedTreasure;
-
-        [Required] public Transform PlayerTransform;
+        [Required] public TreasureCollector TreasureCollector;
         [Required] public TMP_Text TxtTreasureCount;
         public string TreasureCountFormatString = "Treasures: {0}/{1}";
-        [Required] public TMP_Text TxtCollectedTreasure;
-        public Vector2 CollectedPlayerOffset = new(-2f, 0f);
-        public UnityEvent TreasureCollected = new();
 
         [ListDrawerSettings(Expanded = true)]
         public TreasureCountEvent[] TreasureCountEvents;
@@ -47,45 +42,38 @@ namespace SpaceGame
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            if (!collider.attachedRigidbody.TryGetComponent(out TreasureCollectible treasure) || treasure != _collectedTreasure)
+            if (!collider.attachedRigidbody.TryGetComponent(out TreasureCollectible treasure) || treasure != TreasureCollector!.CollectedTreasure)
                 return;
 
             ReturnTreasure(treasure);
         }
 
-        public bool CollectTreasure(TreasureCollectible treasure)
-        {
-            if (_collectedTreasure != null) {
-                Debug.Log("Player has already collected a treasure, cannot collect more.");
-                return false;
-            }
-
-            _collectedTreasure = treasure;
-            TxtCollectedTreasure.text = treasure.Name;
-            TxtCollectedTreasure.gameObject.SetActive(true);
-            treasure.RigidbodyFollower.TransformToFollow = PlayerTransform;
-
-            TreasureCollected.Invoke();
-
-            return true;
-        }
-
         public void ReturnTreasure(TreasureCollectible treasure)
         {
-            TxtTreasureCount.text = string.Format(TreasureCountFormatString, ++ReturnedCount, ReturnedTreasuresToWin);
+            if (treasure == null)
+                throw new ArgumentNullException(nameof(treasure));
+
+            Debug.Log($"Player returning treasure '{treasure.Description}'. Returned count is now {++ReturnedCount}");
+
+            TreasureCollector.Drop(treasure);
+
+            TxtTreasureCount.text = string.Format(TreasureCountFormatString, ReturnedCount, ReturnedTreasuresToWin);
             if (ImgTreasure != null)
                 ImgTreasure.sprite = treasure.Sprite;
             Destroy(treasure.gameObject);
-            _collectedTreasure = null;
             TreasureReturned.Invoke();
 
-            foreach (TreasureCountEvent treasureCountEvent in TreasureCountEvents) {
+            for (int x = 0; x < TreasureCountEvents.Length; x++) {
+                TreasureCountEvent treasureCountEvent = TreasureCountEvents[x];
+
                 bool wasAtOrHigher = treasureCountEvent.AtCountOrHigher;
                 if (ReturnedCount >= treasureCountEvent.TreasureCount && !wasAtOrHigher) {
+                    Debug.Log($"Invoking {nameof(TreasureCountEvent.NowAtCountOrHigher)} event of {nameof(TreasureCountEvent)} at index {x}...");
                     treasureCountEvent.AtCountOrHigher = true;
                     treasureCountEvent.NowAtCountOrHigher.Invoke();
                 }
                 else if (ReturnedCount < treasureCountEvent.TreasureCount && wasAtOrHigher) {
+                    Debug.Log($"Invoking {nameof(TreasureCountEvent.NowLower)} event of {nameof(TreasureCountEvent)} at index {x}...");
                     treasureCountEvent.AtCountOrHigher = false;
                     treasureCountEvent.NowLower.Invoke();
                 }

@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ namespace SpaceGame
 
         public bool DrawGizmos = true;
 
+        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void OnDrawGizmos()
         {
             if (!DrawGizmos)

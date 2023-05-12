@@ -12084,6 +12084,7 @@ GameObject:
   - component: {fileID: 1610478313}
   - component: {fileID: 1610478314}
   - component: {fileID: 1610478315}
+  - component: {fileID: 1610478316}
   m_Layer: 0
   m_Name: input-game-pauser
   m_TagString: Untagged
@@ -12176,6 +12177,35 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+--- !u!114 &1610478316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610478312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: 6baa7f46bb6ae1146aafdf0005e20958, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1610478314}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &1616044349
 PrefabInstance:

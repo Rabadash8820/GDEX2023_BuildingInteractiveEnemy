@@ -77,8 +77,9 @@ namespace SpaceGame
                     float distToMove = Mathf.Min(currSpeed * Time.fixedDeltaTime, distToOffset);
                     RigidbodyToMove.MovePosition(RigidbodyToMove.position + distToMove * moveDir);
 
-                    foreach (FollowDistanceEvent followDistEvent in FollowDistanceEvents)
+                    for (int x = 0; x < FollowDistanceEvents.Length; x++)
                     {
+                        FollowDistanceEvent followDistEvent = FollowDistanceEvents[x];
                         bool wasAtOrCloser = followDistEvent.AtDistanceOrCloser;
                         if (CurrentDistance <= followDistEvent.Distance && !wasAtOrCloser)
                         {

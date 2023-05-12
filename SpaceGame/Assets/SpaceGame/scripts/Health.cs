@@ -24,6 +24,7 @@ namespace SpaceGame
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void Start() => HealthSlider.SetValueWithoutNotify(_healthValue);
 
+        [Button]
         public void UpdateHealth(float amount)
         {
             _healthValue = Math.Max(_healthValue + amount, 0);

@@ -2768,6 +2768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 499307674}
   - component: {fileID: 499307673}
+  - component: {fileID: 499307675}
   m_Layer: 0
   m_Name: trigger-begin
   m_TagString: Untagged
@@ -2807,6 +2808,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &499307675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499307672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfce7ef949f59f478a3d68a5b44531c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventListener:
+    Event: {fileID: 11400000, guid: 9bdb913ea786d9d4aa9b41b1da1b1f60, type: 2}
+    Actions:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1641313915}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &509273649
 GameObject:
   m_ObjectHideFlags: 0
@@ -16098,10 +16128,6 @@ PrefabInstance:
     - target: {fileID: 6429016515434062736, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: m_Name
       value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6429016515434062736, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6627755384921474935, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: HealthSlider

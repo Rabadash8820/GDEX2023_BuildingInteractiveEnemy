@@ -8,7 +8,7 @@ namespace SpaceGame
     public class TreasureCollector : CollectorBase<TreasureCollectible>
     {
         [Required] public Transform PlayerTransform;
-        [Required] public TMP_Text TxtCollectedTreasure;
+        [RequiredIn(PrefabKind.InstanceInScene)] public TMP_Text TxtCollectedTreasure;
         public Vector2 CollectedPlayerOffset = new(-2f, 0f);
 
         public TreasureCollectible CollectedTreasure { get; private set; }

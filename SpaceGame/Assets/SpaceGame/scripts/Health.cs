@@ -13,7 +13,7 @@ namespace SpaceGame
         [ShowInInspector]
         private float _healthValue = 100f;
 
-        [Required] public Slider HealthSlider;
+        [RequiredIn(PrefabKind.InstanceInScene)] public Slider HealthSlider;
 
         public UnityEvent HealthDecreased = new();
         public UnityEvent HealthIncreased = new();

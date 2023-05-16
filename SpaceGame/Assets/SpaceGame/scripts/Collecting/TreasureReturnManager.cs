@@ -20,11 +20,11 @@ namespace SpaceGame
     [RequireComponent(typeof(Collider2D))]
     public class TreasureReturnManager : MonoBehaviour
     {
-        [Required] public TreasureCollector TreasureCollector;
-        [Required] public TMP_Text TxtTreasureCount;
+        [RequiredIn(PrefabKind.InstanceInScene)] public TreasureCollector TreasureCollector;
+        [RequiredIn(PrefabKind.InstanceInScene)] public TMP_Text TxtTreasureCount;
         public string TreasureCountFormatString = "Treasures: {0}/{1}";
 
-        [ListDrawerSettings(Expanded = true)]
+        [ListDrawerSettings(DefaultExpandedState = true)]
         public TreasureCountEvent[] TreasureCountEvents;
 
         [MinValue(0d)]

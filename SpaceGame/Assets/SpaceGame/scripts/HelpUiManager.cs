@@ -15,10 +15,10 @@ namespace SpaceGame
         private bool _pushPullUiShown;
         private bool _allUiShown;
 
-        [Required] public InputRigidbodyMover InputRigidbodyMover;
-        [Required] public InputRigidbodyRotater InputRigidbodyRotater;
-        [Required] public InputPushPuller InputPushPuller;
-        [Required] public CollidingCollidersCollection CollidingCollidersCollection;
+        [RequiredIn(PrefabKind.InstanceInScene)] public InputRigidbodyMover InputRigidbodyMover;
+        [RequiredIn(PrefabKind.InstanceInScene)] public InputRigidbodyRotater InputRigidbodyRotater;
+        [RequiredIn(PrefabKind.InstanceInScene)] public InputPushPuller InputPushPuller;
+        [RequiredIn(PrefabKind.InstanceInScene)] public CollidingCollidersCollection CollidingCollidersCollection;
 
         public UnityEvent HasMoved = new();
         public UnityEvent HasRotated = new();

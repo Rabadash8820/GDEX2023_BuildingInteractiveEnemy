@@ -12,15 +12,6 @@ namespace SpaceGame
         Distance,
     }
 
-    [Serializable]
-    public class FollowDistanceEvent
-    {
-        [MinValue(0d)] public float Distance;
-        public UnityEvent NowAtDistanceOrCloser = new();
-        public UnityEvent NowFurther = new();
-        [NonSerialized] public bool AtDistanceOrCloser;
-    }
-
     public class RigidbodyFollower : MonoBehaviour
     {
         [Required] public Rigidbody2D RigidbodyToMove;
@@ -51,9 +42,6 @@ namespace SpaceGame
         [MinValue(0d)]
         public float FollowDistance;
 
-        [ShowIf("@" + nameof(OffsetType) + " == " + nameof(SpaceGame) + "." + nameof(SpaceGame.OffsetType) + "." + nameof(OffsetType.Distance))]
-        public FollowDistanceEvent[] FollowDistanceEvents;
-
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
         private void FixedUpdate()
         {
@@ -77,34 +65,11 @@ namespace SpaceGame
                     float distToMove = Mathf.Min(currSpeed * Time.fixedDeltaTime, distToOffset);
                     RigidbodyToMove.MovePosition(RigidbodyToMove.position + distToMove * moveDir);
 
-                    for (int x = 0; x < FollowDistanceEvents.Length; x++)
-                    {
-                        FollowDistanceEvent followDistEvent = FollowDistanceEvents[x];
-                        bool wasAtOrCloser = followDistEvent.AtDistanceOrCloser;
-                        if (CurrentDistance <= followDistEvent.Distance && !wasAtOrCloser)
-                        {
-                            followDistEvent.AtDistanceOrCloser = true;
-                            followDistEvent.NowAtDistanceOrCloser.Invoke();
-                        }
-                        else if (CurrentDistance > followDistEvent.Distance && wasAtOrCloser)
-                        {
-                            followDistEvent.AtDistanceOrCloser = false;
-                            followDistEvent.NowFurther.Invoke();
-                        }
-                    }
-
                     break;
 
                 default:
                     return;
             }
-        }
-
-        [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
-        private void OnDrawGizmos()
-        {
-            foreach (FollowDistanceEvent followDistEvent in FollowDistanceEvents)
-                Gizmos.DrawWireSphere(RigidbodyToMove.position, followDistEvent.Distance);
         }
     }
 }

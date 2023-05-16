@@ -110,7 +110,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   Name: collectible
-  PlayerTransform: {fileID: 0}
+  PlayerTransform: {fileID: 1859407560025544371}
   TxtCollectedTreasure: {fileID: 0}
   CollectedPlayerOffset: {x: -2, y: 0}
 --- !u!82 &6878419484074682315
@@ -254,8 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0f3cd78eca942b49630e80f0f9ccd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtTransform: {fileID: 0}
   LookerTransform: {fileID: 2266694342593609258}
+  LookAtTransform: {fileID: 0}
 --- !u!1 &4714894642258420915
 GameObject:
   m_ObjectHideFlags: 0
@@ -6188,18 +6188,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3256977941225937340}
-        m_TargetAssemblyTypeName: SpaceGame.TimerTrigger, Assembly-CSharp
-        m_MethodName: RestartTimer
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 7123871887864799609}
         m_TargetAssemblyTypeName: SpaceGame.TreasureCollector, Assembly-CSharp
         m_MethodName: Drop
@@ -6212,12 +6200,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: a4d46ce49ff52db478214560c5b08727, type: 2}
-        m_TargetAssemblyTypeName: SpaceGame.DestroyerObject, Assembly-CSharp
-        m_MethodName: Destroy
-        m_Mode: 2
+      - m_Target: {fileID: 3256977941225937340}
+        m_TargetAssemblyTypeName: SpaceGame.TimerTrigger, Assembly-CSharp
+        m_MethodName: RestartTimer
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 6429016515434062736}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6439,6 +6427,18 @@ MonoBehaviour:
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: a4d46ce49ff52db478214560c5b08727, type: 2}
+        m_TargetAssemblyTypeName: SpaceGame.DestroyerObject, Assembly-CSharp
+        m_MethodName: Destroy
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 6429016515434062736}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

@@ -15877,102 +15877,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthSlider
-      value: 
-      objectReference: {fileID: 1865203792}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1838267113}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1865203795}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetTimeScale
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetTrigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SpaceGame.TimeManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.Animator, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: decreased
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 280385704378327597, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 499343009295433952, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: Started.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -16057,14 +15961,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2733766300410741424, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: Complete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2733766300410741424, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: Complete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1838267113}
     - target: {fileID: 3163668143925572522, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: Started.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -16166,10 +16062,6 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
-      propertyPath: PlayerTransform
-      value: 
-      objectReference: {fileID: 1462199244}
-    - target: {fileID: 7123871887864799609, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: TxtCollectedTreasure
       value: 
       objectReference: {fileID: 827296575}
@@ -16224,6 +16116,110 @@ PrefabInstance:
     - target: {fileID: 8871942600608595092, guid: 0edef7df8d8d84c57bc1da53ee7f023b, type: 3}
       propertyPath: m_Layer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthSlider
+      value: 
+      objectReference: {fileID: 1865203792}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Complete.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: Complete.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1838267113}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1838267113}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1865203795}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetTimeScale
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SpaceGame.TimeManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: decreased
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDepleted.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: HealthDecreased.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

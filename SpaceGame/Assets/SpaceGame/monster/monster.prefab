@@ -1,5 +1,133 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &41960731978920180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959686428226293020}
+  - component: {fileID: 7305245094443961856}
+  - component: {fileID: 3105898605377548690}
+  - component: {fileID: 8753295568634493699}
+  m_Layer: 0
+  m_Name: laser-trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &959686428226293020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41960731978920180}
+  m_LocalRotation: {x: 0, y: 0, z: -0.107478864, w: 0.9942074}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8364019746467328827}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.34}
+--- !u!58 &7305245094443961856
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41960731978920180}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 15
+--- !u!114 &3105898605377548690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41960731978920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9133ff241f4842d292b92055fdf58ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8753295568634493699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41960731978920180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79b4b44e587945b47830d574e1b22f67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseDesiredTarget: 1
+  DesiredTarget: {fileID: 0}
+  LookAts:
+  - {fileID: 2960864597758228591}
+  - {fileID: 1497386814885176148}
+  ColliderInRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6045751954748927378}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  ColliderOutOfRange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6045751954748927378}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &135448663163879468
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,8 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0f3cd78eca942b49630e80f0f9ccd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtTransform: {fileID: 0}
   LookerTransform: {fileID: 7489379256162393766}
+  LookAtTransform: {fileID: 0}
 --- !u!1 &3248342581572784996
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +263,25 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -232,8 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0f3cd78eca942b49630e80f0f9ccd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LookAtTransform: {fileID: 0}
   LookerTransform: {fileID: 3334966905317960878}
+  LookAtTransform: {fileID: 0}
 --- !u!1 &6045751954748927378
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +636,7 @@ Transform:
   m_Children:
   - {fileID: 8364019746603653995}
   - {fileID: 3000773351835119692}
+  - {fileID: 959686428226293020}
   - {fileID: 6910205637674634374}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -594,13 +742,19 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!95 &8847329956879176501
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -617,7 +771,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!82 &6526638127315429835
 AudioSource:
   m_ObjectHideFlags: 0
@@ -757,38 +912,6 @@ MonoBehaviour:
   MaxSpeed: 4
   FollowOffset: {x: 0, y: 0}
   FollowDistance: 8
-  FollowDistanceEvents:
-  - Distance: 15
-    NowAtDistanceOrCloser:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6045751954748927378}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-    NowFurther:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6045751954748927378}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!114 &7611896960184106285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -802,6 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RigidbodyFollower: {fileID: 3842769139113227381}
+  LaserTriggerCollider: {fileID: 8753295568634493699}
   DrawGizmos: 1
 --- !u!1 &8364019746603653992
 GameObject:

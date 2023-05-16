@@ -1,7 +1,6 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 using System.Linq;
-using UnityEngine.InputSystem;
 using System.Diagnostics.CodeAnalysis;
 
 namespace SpaceGame
@@ -104,9 +103,7 @@ namespace SpaceGame
                 return;
 
             monster.SpawnPoint = spawnPoint;
-            LookAt2D[] eyeLookAts = instance.GetComponentsInChildren<LookAt2D>(includeInactive: true);
-            foreach (LookAt2D lookAt in eyeLookAts)
-                lookAt.LookAtTransform = PlayerTransform;
+            monster.LaserTriggerCollider.DesiredTarget = PlayerTransform;
         }
     }
 }

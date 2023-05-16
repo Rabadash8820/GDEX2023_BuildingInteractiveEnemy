@@ -15,6 +15,8 @@ namespace SpaceGame
         [ShowInInspector, ReadOnly, NonSerialized]
         public Transform GuardPoint;
 
+        [Required] public LookAtTriggerCollider LaserTriggerCollider;
+
         public bool DrawGizmos = true;
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]

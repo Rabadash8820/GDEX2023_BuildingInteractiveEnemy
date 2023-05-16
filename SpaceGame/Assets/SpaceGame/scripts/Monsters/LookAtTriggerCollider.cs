@@ -38,32 +38,28 @@ namespace SpaceGame
         public UnityEvent ColliderOutOfRange = new();
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            Transform triggeringTransform = collision.attachedRigidbody.transform;
-            if (tryAdjustLookAts(triggeringTransform, newTargetTransform: triggeringTransform))
-                ColliderInRange.Invoke();
-        }
+        private void OnTriggerEnter2D(Collider2D collision) => handleTriggerCollision(collision, enterring: true);
+
 
         [SuppressMessage("Style", "IDE1006:Naming Styles", Justification = "Unity message")]
-        private void OnTriggerExit2D(Collider2D collision)
-        {
-            Transform triggeringTransform = collision.attachedRigidbody.transform;
-            if (tryAdjustLookAts(triggeringTransform, newTargetTransform: null))
-                ColliderOutOfRange.Invoke();
-        }
+        private void OnTriggerExit2D(Collider2D collision) => handleTriggerCollision(collision, enterring: false);
 
-        private bool tryAdjustLookAts(Transform triggeringTransform, Transform newTargetTransform)
+        private void handleTriggerCollision(Collider2D collision, bool enterring)
         {
+            Rigidbody2D rb = collision.attachedRigidbody;
+            if (rb == null)
+                return;
+
+            Transform triggeringTransform = rb.transform;
             if (UseDesiredTarget && (DesiredTarget == null || triggeringTransform != DesiredTarget))
-                return false;
+                return;
 
             for (int x = 0; x < LookAts.Length; x++) {
                 LookAt2D lookAt = LookAts[x];
-                lookAt.LookAtTransform = newTargetTransform;
+                lookAt.LookAtTransform = enterring ? triggeringTransform : null;
             }
 
-            return true;
+            (enterring ? ColliderInRange : ColliderOutOfRange).Invoke();
         }
     }
 }

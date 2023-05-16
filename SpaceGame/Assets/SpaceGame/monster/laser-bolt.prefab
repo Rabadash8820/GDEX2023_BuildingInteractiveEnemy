@@ -16,7 +16,8 @@ GameObject:
   - component: {fileID: 3002441600648423672}
   - component: {fileID: -5381924989649174689}
   - component: {fileID: 2532748629877976569}
-  m_Layer: 0
+  - component: {fileID: 8956352448136456086}
+  m_Layer: 8
   m_Name: laser-bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -230,6 +231,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpawnPoint: {fileID: 8601299457986863402}
   Prefab: {fileID: 5450675120147217816, guid: 99af1100a334642dc8ecf9b9580781f3, type: 3}
+--- !u!114 &8956352448136456086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3258480466955337959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fdfe315696ee4404baea5ecda94b310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 0.4
+  StartWithComponentStart: 1
+  Complete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1388466450294518487}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
+        m_MethodName: set_useFullKinematicContacts
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1001 &4499044221200125830
 PrefabInstance:
   m_ObjectHideFlags: 0

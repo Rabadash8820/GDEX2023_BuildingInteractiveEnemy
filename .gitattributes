@@ -42,3 +42,5 @@
 *.dll lfs
 *.pdb lfs
 
+# Other
+*.zip lfs

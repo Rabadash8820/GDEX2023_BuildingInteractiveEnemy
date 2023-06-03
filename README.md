@@ -3,7 +3,7 @@
 ## Overview
 
 This repo contains all source code and assets from my GDEX 2023 presentation _Live Demo: Building an Interactive Enemy_.
-Watch the [recording](./) of the talk for background. Slides are publically available on [One Drive](./).
+Watch the [recording](./) of the talk for background (after 2023-07-01). Slides are publically available on [One Drive](https://tinyurl.com/enemySlidesGdex23).
 
 The Unity project is contained in the `SpaceGame/` folder. Its `Assets/` folder contains subfolders for several third-party assets.
 All first-party assets are stored in the `SpaceGame/` subfolder, grouped by "feature" (`player`, `monster`, `world`, etc.).

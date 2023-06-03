@@ -33,6 +33,7 @@
 *.jpeg lfs
 *.png lfs
 *.tiff lfs
+*.gif lfs
 
 # Audio
 *.mp3 lfs

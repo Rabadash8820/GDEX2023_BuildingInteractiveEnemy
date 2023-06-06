@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 namespace SpaceGame
 {
+    [RequireComponent(typeof(Renderer))]
     public class VisibilityListener : MonoBehaviour
     {
         private bool _inRefactoryVisible;

@@ -608,7 +608,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8364019746467328827}
-  - component: {fileID: 2665822868561460493}
   - component: {fileID: 3857926380168487391}
   - component: {fileID: 8847329956879176501}
   - component: {fileID: 6526638127315429835}
@@ -641,38 +640,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2665822868561460493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8364019746467328822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01e0c3f0d57904f9c841115be3c88862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VisibleRefactoryPeriod: 3
-  InvisibleRefactoryPeriod: 3
-  BecameVisible:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6526638127315429835}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  BecameInvisible:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &3857926380168487391
 Rigidbody2D:
   serializedVersion: 4
@@ -969,6 +936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2451422301280666089}
   - component: {fileID: 843326081914315406}
+  - component: {fileID: 8526865900419923393}
   m_Layer: 0
   m_Name: face-sprite
   m_TagString: Untagged
@@ -1043,3 +1011,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8526865900419923393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8612929902071822787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e0c3f0d57904f9c841115be3c88862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VisibleRefactoryPeriod: 3
+  InvisibleRefactoryPeriod: 3
+  BecameVisible:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6526638127315429835}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  BecameInvisible:
+    m_PersistentCalls:
+      m_Calls: []

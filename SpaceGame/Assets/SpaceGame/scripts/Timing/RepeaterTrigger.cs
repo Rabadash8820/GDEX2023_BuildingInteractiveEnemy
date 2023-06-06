@@ -10,7 +10,9 @@ namespace SpaceGame
         private bool _running = true;
 
         [MinValue(0d)] public float RepeatDuration;
+
         public bool StopAfterMaxRepeats = false;
+
         [ShowIf(nameof(StopAfterMaxRepeats)), MinValue(1d)] public int MaxRepeats = 1;
         public bool StartWithComponentStart;
 

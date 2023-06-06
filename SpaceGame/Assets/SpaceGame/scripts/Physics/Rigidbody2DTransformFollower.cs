@@ -1,4 +1,3 @@
-using System;
 using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -26,7 +25,7 @@ namespace SpaceGame
             "Use a flat curve for constant speed. " +
             "Use a positively sloped curve to slow down while approaching the target offset."
         )]
-        public AnimationCurve SpeedDistanceFalloffCurve = AnimationCurve.Constant(timeStart: 0f, timeEnd: 1f, value: 1f);
+        public AnimationCurve SpeedDistanceFalloffCurve = AnimationCurve.Linear(timeStart: 0f, valueStart: 0f, timeEnd: 1f, valueEnd: 1f);
 
         public bool UseFiniteSpeed = false;
 

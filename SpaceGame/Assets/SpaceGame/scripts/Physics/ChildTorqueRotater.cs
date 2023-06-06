@@ -9,10 +9,10 @@ namespace SpaceGame
     public class ChildTorqueRotater : MonoBehaviour
     {
         [MinMaxSlider(0f, 100f, showFields: true)]
-        public Vector2 MassMultipleTorqueRange = new Vector2(0.5f, 1f);
+        public Vector2 MassMultipleTorqueRange = new(0.5f, 1f);
 
         [MinMaxSlider(0f, 36000f, showFields: true)]
-        public Vector2 KinematicAngularSpeedRange = new Vector2(10f, 90f);
+        public Vector2 KinematicAngularSpeedRange = new(10f, 90f);
 
         public bool RotateOnStart;
 

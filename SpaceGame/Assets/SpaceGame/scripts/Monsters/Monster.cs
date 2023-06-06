@@ -2,12 +2,13 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SpaceGame
 {
     public class Monster : MonoBehaviour
     {
-        [Required] public RigidbodyFollower RigidbodyFollower;
+        [Required] public Rigidbody2DTransformFollower Rigidbody2DTransformFollower;
 
         [ShowInInspector, ReadOnly, NonSerialized]
         public Transform SpawnPoint;
@@ -26,8 +27,8 @@ namespace SpaceGame
                 return;
 
             Gizmos.color = Color.red;
-            if (RigidbodyFollower.TransformToFollow)
-                Gizmos.DrawLine(RigidbodyFollower.RigidbodyToMove.position, RigidbodyFollower.TransformToFollow.position);
+            if (Rigidbody2DTransformFollower.TransformToFollow)
+                Gizmos.DrawLine(Rigidbody2DTransformFollower.RigidbodyToMove.position, Rigidbody2DTransformFollower.TransformToFollow.position);
         }
     }
 }

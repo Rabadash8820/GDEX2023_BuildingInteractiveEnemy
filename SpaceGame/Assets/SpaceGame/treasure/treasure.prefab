@@ -244,7 +244,7 @@ MonoBehaviour:
         m_CallState: 2
   Description: Treasure
   Sprite: {fileID: 0}
-  RigidbodyFollower: {fileID: 1347794357105777438}
+  Rigidbody2DTransformFollower: {fileID: 1347794357105777438}
 --- !u!114 &5632430144122671365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,7 +306,6 @@ MonoBehaviour:
   MaxSpeed: 1
   FollowOffset: {x: -2, y: 0}
   FollowDistance: 0
-  FollowDistanceEvents: []
 --- !u!198 &125955985369538794
 ParticleSystem:
   m_ObjectHideFlags: 0

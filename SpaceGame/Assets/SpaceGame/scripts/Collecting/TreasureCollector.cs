@@ -21,7 +21,7 @@ namespace SpaceGame
             }
 
             CollectedTreasure = treasure;
-            treasure.RigidbodyFollower.TransformToFollow = PlayerTransform;
+            treasure.Rigidbody2DTransformFollower.TransformToFollow = PlayerTransform;
 
             return true;
         }
@@ -43,7 +43,7 @@ namespace SpaceGame
             }
 
             Debug.Log($"{GetType().Name} '{name}' dropped treasure '{CollectedTreasure.Description}'");
-            CollectedTreasure.RigidbodyFollower.TransformToFollow = null;
+            CollectedTreasure.Rigidbody2DTransformFollower.TransformToFollow = null;
             CollectedTreasure = null;
             treasure.Dropped.Invoke();
         }

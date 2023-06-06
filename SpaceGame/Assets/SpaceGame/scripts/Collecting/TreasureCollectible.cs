@@ -11,6 +11,6 @@ namespace SpaceGame
         public Sprite Sprite;
 
         [Required]
-        public RigidbodyFollower RigidbodyFollower;
+        public Rigidbody2DTransformFollower Rigidbody2DTransformFollower;
     }
 }

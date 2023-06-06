@@ -51,8 +51,8 @@ namespace SpaceGame
             }
 
             Debug.Log($"Monster is now following at a distance of {PlayerFollowDistance} units");
-            monster.RigidbodyFollower.TransformToFollow = collider.attachedRigidbody.transform;
-            monster.RigidbodyFollower.FollowDistance = PlayerFollowDistance;
+            monster.Rigidbody2DTransformFollower.TransformToFollow = collider.attachedRigidbody.transform;
+            monster.Rigidbody2DTransformFollower.FollowDistance = PlayerFollowDistance;
         }
 
         private void handleColliderExitingRegion(PolygonCollider2D region, Collider2D collider)
@@ -92,8 +92,8 @@ namespace SpaceGame
             Debug.Log($"Monster is now returning to guard spawn point '{spawnPointToGuard.name}'");
             monster.GuardPoint = spawnPointToGuard;
             monster.transform.SetParent(spawnPointToGuard, worldPositionStays: true);
-            monster.RigidbodyFollower.TransformToFollow = spawnPointToGuard;
-            monster.RigidbodyFollower.FollowDistance = 0f;
+            monster.Rigidbody2DTransformFollower.TransformToFollow = spawnPointToGuard;
+            monster.Rigidbody2DTransformFollower.FollowDistance = 0f;
         }
 
         private void initializeSpawnedInstance(Transform instance, Transform spawnPoint, PolygonCollider2D region)

@@ -2,7 +2,6 @@ using System;
 using System.Diagnostics.CodeAnalysis;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace SpaceGame
 {
@@ -12,7 +11,7 @@ namespace SpaceGame
         Distance,
     }
 
-    public class RigidbodyFollower : MonoBehaviour
+    public class Rigidbody2DTransformFollower : MonoBehaviour
     {
         [Required] public Rigidbody2D RigidbodyToMove;
         public Transform TransformToFollow;

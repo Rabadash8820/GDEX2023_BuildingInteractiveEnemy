@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SpaceGame
 {
-    public class Rigidbody2DLookAt : MonoBehaviour
+    public class Rigidbody2DLookAtRotater : MonoBehaviour
     {
         [Required] public Transform LookAtTransform;
         [Required] public Rigidbody2D LookerRigidbody;

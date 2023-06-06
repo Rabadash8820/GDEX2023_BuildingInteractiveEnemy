@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a252108fe803d4aa5b30d6b08af0533e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RigidbodyFollower: {fileID: 3842769139113227381}
+  Rigidbody2DTransformFollower: {fileID: 3842769139113227381}
   LaserTriggerCollider: {fileID: 8753295568634493699}
   DrawGizmos: 1
 --- !u!1 &8364019746603653992

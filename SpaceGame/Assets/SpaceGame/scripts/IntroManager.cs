@@ -17,7 +17,8 @@ namespace SpaceGame
             Debug.Log($"{(show ? "Showing" : "Not showing")} intro ({nameof(ShowIntro)}={ShowIntro}, {nameof(s_alreadyShown)}={s_alreadyShown})...");
 
             (show ? ShowingIntro : NotShowingIntro).Invoke();
-            s_alreadyShown = show;
+            if (show)
+                s_alreadyShown = true;
         }
     }
 }

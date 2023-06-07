@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Projectiles
+    uniqueID: 760336703
+    locked: 0
   - name: UiIndicators
     uniqueID: 2547923859
     locked: 0

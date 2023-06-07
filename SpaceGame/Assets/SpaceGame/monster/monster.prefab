@@ -161,7 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookerTransform: {fileID: 7489379256162393766}
-  LookAtTransform: {fileID: 8601299457986863402, guid: a23348c28747d411987152bbfe8f364c, type: 3}
+  LookAtTransform: {fileID: 0}
 --- !u!114 &7057850895580828212
 MonoBehaviour:
   m_ObjectHideFlags: 0

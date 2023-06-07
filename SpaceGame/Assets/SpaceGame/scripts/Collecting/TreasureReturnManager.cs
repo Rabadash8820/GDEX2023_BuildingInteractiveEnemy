@@ -78,6 +78,8 @@ namespace SpaceGame
                     treasureCountEvent.NowLower.Invoke();
                 }
             }
+
+            CheckIfAllReturned();
         }
 
         [Button]

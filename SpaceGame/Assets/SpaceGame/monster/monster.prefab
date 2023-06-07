@@ -115,52 +115,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &135448663163879468
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5373332797752089237}
-  - component: {fileID: 8942679051560106785}
-  m_Layer: 0
-  m_Name: eye-R-laser-bolt-reorient
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5373332797752089237
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135448663163879468}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7489379256162393766}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &8942679051560106785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135448663163879468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfdb31cf724646ffa08a9b047f6890c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 5373332797752089237}
-  Prefab: {fileID: 3258480466955337959, guid: a23348c28747d411987152bbfe8f364c, type: 3}
 --- !u!1 &3026179857292456192
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,6 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7489379256162393766}
   - component: {fileID: 1497386814885176148}
+  - component: {fileID: 7057850895580828212}
   m_Layer: 0
   m_Name: eye-R
   m_TagString: Untagged
@@ -189,8 +144,7 @@ Transform:
   m_LocalPosition: {x: 0.42, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5373332797752089237}
+  m_Children: []
   m_Father: {fileID: 6910205637674634374}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,7 +161,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LookerTransform: {fileID: 7489379256162393766}
-  LookAtTransform: {fileID: 0}
+  LookAtTransform: {fileID: 8601299457986863402, guid: a23348c28747d411987152bbfe8f364c, type: 3}
+--- !u!114 &7057850895580828212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026179857292456192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfdb31cf724646ffa08a9b047f6890c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 7489379256162393766}
+  Prefab: {fileID: 3258480466955337959, guid: a23348c28747d411987152bbfe8f364c, type: 3}
 --- !u!1 &3248342581572784996
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,52 +243,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.13, y: -0}
   m_Size: {x: 6.41, y: 7.79}
   m_Direction: 0
---- !u!1 &3269780160101648753
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3684988972467375909}
-  - component: {fileID: 5212334348946215630}
-  m_Layer: 0
-  m_Name: eye-L-laser-bolt-reorient
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3684988972467375909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3269780160101648753}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3334966905317960878}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &5212334348946215630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3269780160101648753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cfdb31cf724646ffa08a9b047f6890c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPoint: {fileID: 3684988972467375909}
-  Prefab: {fileID: 3258480466955337959, guid: a23348c28747d411987152bbfe8f364c, type: 3}
 --- !u!1 &5872345552157547536
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3334966905317960878}
   - component: {fileID: 2960864597758228591}
+  - component: {fileID: 8632031555856422229}
   m_Layer: 0
   m_Name: eye-L
   m_TagString: Untagged
@@ -349,8 +272,7 @@ Transform:
   m_LocalPosition: {x: -2.1, y: 1.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3684988972467375909}
+  m_Children: []
   m_Father: {fileID: 6910205637674634374}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -368,6 +290,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LookerTransform: {fileID: 3334966905317960878}
   LookAtTransform: {fileID: 0}
+--- !u!114 &8632031555856422229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5872345552157547536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfdb31cf724646ffa08a9b047f6890c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoint: {fileID: 3334966905317960878}
+  Prefab: {fileID: 3258480466955337959, guid: a23348c28747d411987152bbfe8f364c, type: 3}
 --- !u!1 &6045751954748927378
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,8 +402,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5212334348946215630}
-        m_TargetAssemblyTypeName: SpaceGame.AtTransformSpawner, Assembly-CSharp
+      - m_Target: {fileID: 8632031555856422229}
+        m_TargetAssemblyTypeName: SpaceGame.AtTransformSpawner, SpaceGame
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:
@@ -478,8 +414,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8942679051560106785}
-        m_TargetAssemblyTypeName: SpaceGame.AtTransformSpawner, Assembly-CSharp
+      - m_Target: {fileID: 7057850895580828212}
+        m_TargetAssemblyTypeName: SpaceGame.AtTransformSpawner, SpaceGame
         m_MethodName: Spawn
         m_Mode: 1
         m_Arguments:

@@ -151,9 +151,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.05}
-  m_Size: {x: 0.54, y: 4.12}
-  m_Direction: 0
+  m_Offset: {x: 2.05, y: 0}
+  m_Size: {x: 4.12, y: 0.54}
+  m_Direction: 1
 --- !u!95 &1334119410233045365
 Animator:
   serializedVersion: 5
@@ -189,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RigidbodyToMove: {fileID: 1388466450294518487}
   Speed: 20
-  LocalDirection: {x: 0, y: -1}
+  LocalDirection: {x: 1, y: 0}
 --- !u!114 &-5381924989649174689
 MonoBehaviour:
   m_ObjectHideFlags: 0
